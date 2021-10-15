@@ -55,11 +55,15 @@ Use animalNames to populate and return the displayNames array with only the anim
 displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
 */
 
-
-function animalNames(/*Your Code Here*/){
-  /*Your Code Here*/
+const displayNames = [];
+var tempArray;
+const animalNames = zooAnimals.forEach(function(item){
+  var tempArray = "name: "+item.animal_name + ", " + "scientific: " + item.scientific_name;
+  displayNames.push(tempArray);
 }
-
+)
+;
+console.log(displayNames);
 
 /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
 The zoo needs a list of all their animal's names converted to lower case. 
@@ -72,8 +76,6 @@ const lowerCaseNames = zooAnimals.map(function(item){
 }
 )
 
-  
-  
    /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
