@@ -55,6 +55,7 @@ Use animalNames to populate and return the displayNames array with only the anim
 displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
 */
 
+
 function animalNames(/*Your Code Here*/){
   /*Your Code Here*/
 }
@@ -66,9 +67,12 @@ Using lowerCaseNames use .map() to create a new array of strings with the animal
 For example: ['jackal, asiatic', .....]
 */
 
-function lowerCaseNames(/*Your Code Here*/){
-  /*Your Code Here*/
+const lowerCaseNames = zooAnimals.map(function(item){
+  return item.animal_name.toLowerCase();
 }
+)
+  console.log(lowerCaseNames);
+
   
   
    /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
@@ -79,7 +83,7 @@ function lowerCaseNames(/*Your Code Here*/){
   const lowPopulationAnimals = zooAnimals.filter(function(item){
     return item.population < 5;
   });
-  
+  console.log(lowPopulationAnimals);
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
