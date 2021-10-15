@@ -17,9 +17,9 @@ function myFunction() {
 }
 myFunction();
 
-//🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
-//The nested function can access the variable internal because it is a callback in myFunction. Additionally, the function isn't hoisted.
-//const internal was defined in the same place as the callback function, and thus the nested function is able to use the variable.
+// 🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
+// The nested function can access the variable internal because it is a callback in myFunction. Additionally, the function isn't hoisted.
+// const internal was defined in the same place as the callback function, and thus the nested function is able to use the variable.
 
 
 
@@ -35,6 +35,7 @@ function summation(i) {
     return (i*(i+1))/2;
   }
 
+  console.log(summation(4));
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
 
@@ -62,6 +63,7 @@ const animalNames = zooAnimals.forEach(function(item){
   displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`);
 });
 
+console.log(displayNames);
 
 /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
 The zoo needs a list of all their animal's names converted to lower case. 
@@ -74,7 +76,9 @@ const lowerCaseNames = zooAnimals.map(item => {
   return item.animal_name.toLowerCase();
   
   });
-  
+
+  console.log(lowerCaseNames);
+
 
    /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
@@ -84,7 +88,7 @@ const lowerCaseNames = zooAnimals.map(item => {
   const lowPopulationAnimals = zooAnimals.filter(item => {
     return item.population < 5;
     });
-
+    console.log(lowPopulationAnimals);
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
@@ -96,7 +100,7 @@ const lowerCaseNames = zooAnimals.map(item => {
     return accumulator + item.population;
   },0);
 
- 
+  console.log(USApop);
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
   /* 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
@@ -135,9 +139,9 @@ function greeting(firstName, lastName){
   
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
   // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
-  // console.log(consume(2, 2, add)); // 4
-  // console.log(consume(10, 16, multiply)); // 160
-  // console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+  console.log(consume(2, 2, add)); // 4
+  console.log(consume(10, 16, multiply)); // 160
+  console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 // 🐴🐴🐴 Topic 3: Prototypes 🐴🐴🐴 //
 //🐴🐴🐴 Task: You are to build a cuboid maker that can return values for a cuboid's volume or surface area. Cuboids are similar to cubes but do not have even sides. Follow the steps in order to accomplish this challenge. 🐴🐴🐴
@@ -181,8 +185,8 @@ function CuboidMaker(length, width, height){
 
 // 🐴🐴🐴 Test your volume and surfaceArea methods by uncommenting the logs below: 🐴🐴🐴
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
+console.log(cuboid.volume()); // 100
+console.log(cuboid.surfaceArea()); // 130
  
 
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
@@ -200,8 +204,8 @@ class CuboidMakerTwo{
 var cuboidTwo = new CuboidMaker(4,5,5);
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
-// console.log(cuboidTwo.volume()); // 100
-// console.log(cuboidTwo.surfaceArea()); // 130
+console.log(cuboidTwo.volume()); // 100
+console.log(cuboidTwo.surfaceArea()); // 130
 
 
 
