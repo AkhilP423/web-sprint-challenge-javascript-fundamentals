@@ -96,7 +96,7 @@ const lowerCaseNames = zooAnimals.map(item => {
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  const USApop = zooAnimals.reduce(function( accumulator, item){
+  const USApop = zooAnimals.reduce(function(accumulator, item){
     return accumulator + item.population;
   },0);
 
@@ -148,11 +148,11 @@ function greeting(firstName, lastName){
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
  Use the constructor function named CuboidMaker to accept properties for length, width, and height which can be initialized as an object
 */
-function CuboidMaker(length, width, height){
-    this.length = length;
-    this.width = width;
-    this.height = height;
-  }
+function CuboidMaker(cubeDimension){
+  this.length = cubeDimension.length;
+  this.width = cubeDimension.width;
+  this.height = cubeDimension.height;
+}
   
 
 /* 🐴🐴🐴 Step 2: Volume Method 🐴🐴🐴
@@ -161,7 +161,8 @@ function CuboidMaker(length, width, height){
 
   CuboidMaker.prototype.volume = function(){
     return this.length*this.width*this.height;
-  }
+    };
+  
 
 
 /* 🐴🐴🐴 Step 3: Surface Area Method 🐴🐴🐴
@@ -179,29 +180,45 @@ function CuboidMaker(length, width, height){
 /* 🐴🐴🐴 Step 4: Create a new object that uses CuboidMaker 🐴🐴🐴
   Create an object called cuboid that uses the new keyword to use our CuboidMaker constructor
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid. */
-  var cuboid = new CuboidMaker(4,5,5);
+  const cuboid = new CuboidMaker({
+    length: 4,
+    width: 5,
+    height: 5
+  });
 
 
 
 // 🐴🐴🐴 Test your volume and surfaceArea methods by uncommenting the logs below: 🐴🐴🐴
-// ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
-console.log(cuboid.volume()); // 100
-console.log(cuboid.surfaceArea()); // 130
+// // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
+// console.log(cuboid.volume()); // 100
+// console.log(cuboid.surfaceArea()); // 130
  
 
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
 class CuboidMakerTwo{
-  constructor(length, width, height){
+  constructor(cubeDimension){
 
-    this.length = length;
+    this.length = cubeDimension.length;
 
-    this.width = width;
+    this.width = cubeDimension.width;
 
-    this.height = height;
-}}
+    this.height = cubeDimension.height;
+}
+volume(){
+  return this.length*this.width*this.height;
+}
 
-var cuboidTwo = new CuboidMaker(4,5,5);
+surfaceArea(){
+  return 2*(this.length*this.width + this.length*this.height + this.width*this.height);
+}
+}
+
+const cuboidTwo = new CuboidMakerTwo({
+  length:4,
+  width:5,
+  height:5
+})
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
 console.log(cuboidTwo.volume()); // 100
