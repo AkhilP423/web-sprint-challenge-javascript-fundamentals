@@ -63,7 +63,6 @@ const animalNames = zooAnimals.forEach(function(item){
 }
 )
 ;
-console.log(displayNames);
 
 /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
 The zoo needs a list of all their animal's names converted to lower case. 
@@ -104,16 +103,16 @@ const lowerCaseNames = zooAnimals.map(function(item){
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
   */
 
-  function consume(/*Your Code Here */){
-    /*Your Code Here */
+  function consume(a, b, cb){
+    return cb(a, b);
   }
  
   
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
   
-function add(/*Your Code Here */){
-    /*Your Code Here*/
+function add(a , b){
+    return a + b;
   }
 
 
