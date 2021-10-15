@@ -25,15 +25,22 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read.
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
+    .map() is an iterator function that is used for manipulating or reshaping data. It returns a brand new array without touching the original array. Whatever you set the function call equal to, you can map it to the new array. A use case for .map is replacing a for loop that loops through an object to set a certain part of the object into a new array. For instance, a set of objects with cities and states can be looped through to form a new object with just the cities, with the .map function.
 
+    .filter() is similar to .map, returning a new array and calls back each element, index, and returns each in turn. However, .filter() initiates a "truth" test, and only returns the elements if true, else ignores. It's instead used for filtering out an array by a specific condition. A use case may be to filter out a bunch of students' grades in an array, and push only students' data that receive a '70' as their grade, in order to list everyone who passed.
+
+    .reduce() returns a new array, and takes a callback that is a reducer function. It takes a previous and next value (accumulator and currentValue), and manipulates or reshapes data into a single value. It can be used to work with a large amount of integers. For instance, it can be used to add up the populations of several states and essentially be used as a calculator. 
 2. Explain the difference between a callback and a higher order function.
-
+    A higher order function takes another function (or functions) as an arguments and returns a function to its callers. A callback function is a function that is passed to another function, and that function will call it. Thus, a callback function is not necessarily a higher order function, but a function that receives a callback as an argument is a higher order function.
 3. Explain what a closure is.
-
+    A closure is a function and its references to its surrounding state. Thus, a closer gives you access to an outer function's scope, from an inner function. A closure is created every time a function is created.
 4. Describe the four principles of the 'this' keyword.
-
+    1. If a function is called by a preceding dot, the object before the dot is assigned to this. 
+    2. If a function is contained in the global scope, the value of this inside the function will be the window object.
+    3. If a constructor function is used, this will refer to the specific instance of the object created and returned by the constructor function.
+    4. If javascript's call or apply method is used, this is then defined explicitly. 
 5. Why do we need super() in an extended class?
-
+    super() lets us know that we are calling the constructor of the parent class to access it's properties and methods.
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
 ## Instructions
