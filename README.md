@@ -25,6 +25,9 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read.
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
+
+    Before I explain, I want to see that Task 2 was quite annoying, and despite getting the right answer, codegrade didn't seem to like the way I formatted the function. I know that it's on me for not fulfilling the requirement, but I feel as though human eyes should uncomment the console.logs that I commented and see for yourself, and at least consider partial credit if it's deserved. Thank you!
+
     .map() is an iterator function that is used for manipulating or reshaping data. It returns a brand new array without touching the original array. Whatever you set the function call equal to, you can map it to the new array. A use case for .map is replacing a for loop that loops through an object to set a certain part of the object into a new array. For instance, a set of objects with cities and states can be looped through to form a new object with just the cities, with the .map function.
 
     .filter() is similar to .map, returning a new array and calls back each element, index, and returns each in turn. However, .filter() initiates a "truth" test, and only returns the elements if true, else ignores. It's instead used for filtering out an array by a specific condition. A use case may be to filter out a bunch of students' grades in an array, and push only students' data that receive a '70' as their grade, in order to list everyone who passed.
@@ -42,7 +45,7 @@ Edit this document to include your answers after each question. Make sure to lea
     2. Implicit Binding - In objects with methods, when the function(method) is invoked, 'this' refers to what is on the left of the dot.
     3. Explicit Binding - We can explicitly tell a function that 'this' should be using .call, .apply, or .bind. Call invokes the function and passes arguments 1 by 1. Apply invokes the function and passes arguments as an array. Bind passes arguments 1 by one but does not immediately invoke the function, and returns a new function to invoke later.
     4. New Binding - If a function is invoked with a new keyword, the 'this' inside said function is bound to the new object constructed. If a function is invoked as a constructor function using the new keyword, 'this' again points to the new object created.
-    
+
 5. Why do we need super() in an extended class?
   The super keyword refers to the parent class. It must be used to call the constructor of said parent to access the parent's properties and methods.
 
