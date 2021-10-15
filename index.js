@@ -34,8 +34,7 @@ For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you ma
 function summation(i) {
     return (i*(i+1))/2;
   }
-
-  console.log(summation(4));
+//  console.log(summation(4));
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
 
@@ -63,32 +62,27 @@ const animalNames = zooAnimals.forEach(function(item){
   displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`);
 });
 
-console.log(displayNames);
+// console.log(displayNames);
 
 /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
 The zoo needs a list of all their animal's names converted to lower case. 
 Using lowerCaseNames use .map() to create a new array of strings with the animal's names in lowercase and return the new array. 
 For example: ['jackal, asiatic', .....]
 */
-
 const lowerCaseNames = zooAnimals.map(item => {
-
   return item.animal_name.toLowerCase();
-  
   });
-
-  console.log(lowerCaseNames);
-
-
+// console.log(lowerCaseNames);
    /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
-
+   
   const lowPopulationAnimals = zooAnimals.filter(item => {
     return item.population < 5;
     });
-    console.log(lowPopulationAnimals);
+
+  // console.log(lowPopulationAnimals);
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
@@ -99,8 +93,7 @@ const lowerCaseNames = zooAnimals.map(item => {
   const USApop = zooAnimals.reduce(function(accumulator, item){
     return accumulator + item.population;
   },0);
-
-  console.log(USApop);
+  // console.log(USApop);
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
   /* 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
@@ -139,9 +132,9 @@ function greeting(firstName, lastName){
   
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
   // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
-  console.log(consume(2, 2, add)); // 4
-  console.log(consume(10, 16, multiply)); // 160
-  console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+  // console.log(consume(2, 2, add)); // 4
+  // console.log(consume(10, 16, multiply)); // 160
+  // console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 // 🐴🐴🐴 Topic 3: Prototypes 🐴🐴🐴 //
 //🐴🐴🐴 Task: You are to build a cuboid maker that can return values for a cuboid's volume or surface area. Cuboids are similar to cubes but do not have even sides. Follow the steps in order to accomplish this challenge. 🐴🐴🐴
@@ -221,13 +214,8 @@ const cuboidTwo = new CuboidMakerTwo({
 })
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
-console.log(cuboidTwo.volume()); // 100
-console.log(cuboidTwo.surfaceArea()); // 130
-
-
-
-  
-
+// console.log(cuboidTwo.volume()); // 100
+// console.log(cuboidTwo.surfaceArea()); // 130
 
   /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
   function foo(){

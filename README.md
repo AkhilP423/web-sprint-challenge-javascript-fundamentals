@@ -29,19 +29,22 @@ Edit this document to include your answers after each question. Make sure to lea
 
     .filter() is similar to .map, returning a new array and calls back each element, index, and returns each in turn. However, .filter() initiates a "truth" test, and only returns the elements if true, else ignores. It's instead used for filtering out an array by a specific condition. A use case may be to filter out a bunch of students' grades in an array, and push only students' data that receive a '70' as their grade, in order to list everyone who passed.
 
-    .reduce() returns a new array, and takes a callback that is a reducer function. It takes a previous and next value (accumulator and currentValue), and manipulates or reshapes data into a single value. It can be used to work with a large amount of integers. For instance, it can be used to add up the populations of several states and essentially be used as a calculator. 
+    .reduce() method is used to execute a reducer function on each value of the array it's attached to. It returns a single value which is the accumulation of the reducer function. Since it only returns a single value, it is vastly different in use cases from .map or .filter. A good use case would be to .reduce() a data set with several integers, such as state population to find the total sum (giving you the country population).
+
 2. Explain the difference between a callback and a higher order function.
-    A higher order function takes another function (or functions) as an arguments and returns a function to its callers. A callback function is a function that is passed to another function, and that function will call it. Thus, a callback function is not necessarily a higher order function, but a function that receives a callback as an argument is a higher order function.
+    A higher order function takes another function (or functions) as an arguments and returns a function to its callers. A callback function is a function that is passed to another function, in order to be called by said function. Thus, a callback function is not necessarily a higher order function, but a function that receives a callback as an argument is a higher order function.
+
 3. Explain what a closure is.
-    A closure is a function and its references to its surrounding state. Thus, a closer gives you access to an outer function's scope, from an inner function. A closure is created every time a function is created.
+     A closure is a function bundled together with references to the surrounding state. Essentially, it gives you access to an outer function's scope from an inner function. Closures are created every time a function is created, upon creation.
+
 4. Describe the four principles of the 'this' keyword.
-    1. If a function is called by a preceding dot, the object before the dot is assigned to this. 
-    2. If a function is contained in the global scope, the value of this inside the function will be the window object.
-    3. If a constructor function is used, this will refer to the specific instance of the object created and returned by the constructor function.
-    4. If javascript's call or apply method is used, this is then defined explicitly. 
+    1. Window binding - If 'this' isn't given any context, it will return the window, the global object in the node terminal. It is undefined in strict mode.
+    2. Implicit Binding - In objects with methods, when the function(method) is invoked, 'this' refers to what is on the left of the dot.
+    3. Explicit Binding - We can explicitly tell a function that 'this' should be using .call, .apply, or .bind. Call invokes the function and passes arguments 1 by 1. Apply invokes the function and passes arguments as an array. Bind passes arguments 1 by one but does not immediately invoke the function, and returns a new function to invoke later.
+    4. New Binding - If a function is invoked with a new keyword, the 'this' inside said function is bound to the new object constructed. If a function is invoked as a constructor function using the new keyword, 'this' again points to the new object created.
+    
 5. Why do we need super() in an extended class?
-    super() lets us know that we are calling the constructor of the parent class to access it's properties and methods.
-You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
+  The super keyword refers to the parent class. It must be used to call the constructor of said parent to access the parent's properties and methods.
 
 ## Instructions
 
